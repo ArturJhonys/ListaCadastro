@@ -1,9 +1,9 @@
 import React from 'react';
 
 
-export default function Button( value ){
+export default function Button( { event, value} ){
     return(
-        <button onClick={ ()=> value}>
+        <button onClick={ ()=> event(value)}>
             [X]
         </button>
     );

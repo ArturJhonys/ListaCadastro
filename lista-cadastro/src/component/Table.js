@@ -22,7 +22,7 @@ export default function Table({ pessoas, onRemove }) {
                         <tr>
                            <Cell value={pessoa.nome} /> 
                            <Cell value={pessoa.idade} />
-                           
+                           <Button event={onRemove} value={pessoa}/>
                         </tr>
                     ))}
                 </tbody>
