@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import Input from './Input';
-import Button from './Button';
+
 
 export default function Form({ onAdd }) {
 
@@ -13,10 +13,16 @@ export default function Form({ onAdd }) {
 
             <Input label='Nome:' value={nome} onChange={setNome} />
             <Input label='Idade:' value={idade} onChange={setIdade} />
+            
+            <button
+                onClick={() => {
 
-            <Button  onClick={onAdd} value={ nome , idade} text = {'SALVAR'}/>
+                    onAdd({ nome , idade})
 
-           
+                    setNome("")
+                    setIdade("")
+                }}
+                className="adicionar">Salvar</button>
         </div>
     );
 }
