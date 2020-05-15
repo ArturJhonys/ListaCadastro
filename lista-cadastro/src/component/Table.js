@@ -18,11 +18,17 @@ export default function Table({ pessoas, onRemove }) {
                     </tr>
                 </thead>
                 <tbody>
+                   
                     {pessoas.map(pessoa => (
+                        
                         <tr>
                            <Cell value={pessoa.nome} /> 
                            <Cell value={pessoa.idade} />
-                           <Button event={onRemove} value={pessoa}/>
+                           
+                           <Cell value={
+                                <Button onClick={onRemove} value={pessoa} text={'EXCLUIR'}/>}
+                            />
+                            
                         </tr>
                     ))}
                 </tbody>

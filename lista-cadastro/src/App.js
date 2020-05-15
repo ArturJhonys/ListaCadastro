@@ -14,6 +14,8 @@ function App() {
     setPessoas(novasPessoas)
   }, [pessoas])
 
+
+
   return (
     <>
       <Form onAdd={(pessoa) => { setPessoas( [...pessoas, pessoa]); }}/>

@@ -1,10 +1,10 @@
 import React from 'react';
 
 
-export default function Button( { event, value} ){
+export default function Button( { onClick, value, text } ){
     return(
-        <button onClick={ ()=> event(value)}>
-            [X]
+        <button onClick={ ()=> onClick(value)}>
+            {text}
         </button>
     );
 }
